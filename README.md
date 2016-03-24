@@ -1,5 +1,7 @@
 # euler26 - a long division solution to Project Euler #26
 
+https://projecteuler.net/problem=26
+
 # EXAMPLE
 
 ```
