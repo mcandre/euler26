@@ -1,6 +1,7 @@
 #!/usr/bin/env runhaskell
 
 import Data.List (sortOn)
+import System.Environment (getArgs)
 
 chain (0:_) _ _ = []
 chain dividends dividend divisor
@@ -15,4 +16,7 @@ chain dividends dividend divisor
        | (multiplicand + 1) * multiplier > limit = multiplicand
        | otherwise = maxMultiple (multiplicand + 1) multiplier limit
 
-main = print . head . sortOn ((1 -) . length . (chain [] 1)) $ [1 .. 999]
+main = do
+  args <- getArgs
+  let n = read . head $ args
+  print . head . sortOn ((1 -) . length . (chain [] 1)) $ [1 .. n - 1]

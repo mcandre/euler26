@@ -5,7 +5,7 @@ https://projecteuler.net/problem=26
 # EXAMPLE
 
 ```
-$ time ./euler26.hs
+$ time ./euler26.hs 1000
 ...
 
 real	0m1.893s
